@@ -1,16 +1,75 @@
-# mycamp_app
+# MyCamp 🗺️
 
-A new Flutter project.
+MyCamp is an offline campus navigation application built using Flutter.  
+It provides graph-based route calculation using JSON-defined nodes and edges, enabling structured navigation inside a campus environment.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📌 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🏫 Interactive campus map
+- 📍 Graph-based navigation using Nodes & Edges
+- 🧠 Shortest path calculation (Graph service layer)
+- 💾 Offline data storage using Hive
+- 👤 Admin user management screen
+- 📦 Clean feature-based architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🏗 Architecture
+
+The project follows a feature-based Clean Architecture structure:
+
+lib/
+│
+├── core/
+│ └── storage/
+│
+├── features/
+│ ├── campus_navigation/
+│ │ ├── data/
+│ │ ├── domain/
+│ │ └── presentation/
+│ │
+│ └── home/
+│
+└── main.dart
+
+
+### Layers
+
+- **Data Layer** → Models & local data services (JSON loading, storage)
+- **Domain Layer** → Graph logic & business rules
+- **Presentation Layer** → UI screens & coordinate mapping
+
+---
+
+## 🗂 Map Data Structure
+
+Navigation is powered by JSON files:
+
+- `nodes.json`
+- `edges.json`
+- `edges_with_geometry.json`
+- `places.json`
+
+These define the campus graph and routing structure.
+
+---
+
+## 🛠 Tech Stack
+
+- Flutter
+- Dart
+- Hive (local storage)
+- JSON-based graph structure
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/irfan28nizar/mycamp.git
+cd mycamp
