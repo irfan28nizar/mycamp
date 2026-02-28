@@ -70,7 +70,7 @@ class ManageUsersScreen extends StatelessWidget {
                           physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           itemCount: users.length,
-                          separatorBuilder: (_, __) => Divider(
+                          separatorBuilder: (_, index) => Divider(
                             height: 1,
                             color: Theme.of(context).colorScheme.outlineVariant,
                           ),
@@ -134,7 +134,7 @@ class _CreateUserDialogState extends State<_CreateUserDialog> {
               ),
               const SizedBox(height: 14),
               DropdownButtonFormField<String>(
-                value: _selectedRole,
+                initialValue: _selectedRole,
                 items: const [
                   DropdownMenuItem(value: 'admin', child: Text('admin')),
                   DropdownMenuItem(value: 'student', child: Text('student')),
